@@ -1,8 +1,18 @@
 import express from "express";
+import videoController from "../controllers/video.controller.js";
+import multer from "multer";
+
+const upload = multer({
+  storage: multer.memoryStorage(),
+});
 
 const router = express.Router();
 
-router.post("")
-
+//create video routes
+router.post(
+    "/upload/:id", 
+    upload.single("video"), 
+    videoController.videoUpload
+);
 
 export default router;
