@@ -11,7 +11,7 @@ const videoSchema = new mongoose.Schema({
     },
     
     video: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         ref: "videos"
     }
 });

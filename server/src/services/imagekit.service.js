@@ -7,7 +7,7 @@ async function uploadFile(file) {
     const result = await client.files.upload({
         folder: "files/videos",
         file,
-        fileName
+        fileName: "video" + Date.now()
     });
 
     return result;

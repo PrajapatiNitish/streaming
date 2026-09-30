@@ -10,8 +10,8 @@ const router = express.Router();
 
 //create video routes
 router.post(
-    "/upload/:id", 
-    upload.single("video"), 
+    "/upload", 
+    upload.single("video"), //req.file
     videoController.videoUpload
 );
 
