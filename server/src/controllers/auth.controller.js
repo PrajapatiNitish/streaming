@@ -3,43 +3,39 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
 async function registerUser(req, res) {
-  const { username, email, password, role = "user" } = await req.body;
+  const { username, email, password } = req.body;
 
-  //Authenticate to the user without validate user for now
-  const isUserExist = userModel.find({
-    $or: [{ username, email }],
+  // Validate User
+  const isUserExist = await userModel.findOne({
+    $or: [{ username }, { email }],
   });
 
   if (isUserExist) {
-    res.status(409).json({ msg: "user already exists" });
+    return res.status(409).json({ msg: "User already exists" });
   }
 
   const hash = await bcrypt.hash(password, 10);
 
-  //Try to create user in db
   try {
     const user = await userModel.create({
       username,
       email,
       password: hash,
-      role,
     });
 
     const token = jwt.sign(
       {
-        id: user._id,
-        role: user.role,
+        id: user._id
       },
       process.env.JWT_SECRET,
     );
 
     res.cookie("token", token);
 
-    res
-      .status(201)
-      .json({ msg: "User successfully created", user: user.toObject() });
+    res.status(201).json({ msg: `Welcome, ${username}` });
   } catch (err) {
-    res.status(500).json({ msg: "Something went wrong" });
+    res.status(500).json({ msg: "Sorry, something went wrong!" });
+    throw err
   }
 }
 
