@@ -39,4 +39,28 @@ async function registerUser(req, res) {
   }
 }
 
-export default { registerUser };
+async function loginUser(req, res) {
+  const {username, email, password} = req.body;
+
+  const user = await userModel.findOne({
+    $or: [{email}, {username}]
+  });
+
+  if(!user) {
+    return res.status(404).json({msg: "user does not exist!"});
+  }
+
+  const isPasswordValid = await bcrypt.compare(password, user.password.toString());
+
+  if(!isPasswordValid) {
+    return res.status(401).json({msg: "Password is wrong"});
+  } 
+
+  const token = jwt.sign({id: user._id}, process.env.JWT_SECRET);
+
+  res.cookie("login", token);
+
+  res.status(200).json({msg: `Welcome back - ${user.username.toString()}`})
+}
+
+export default { registerUser, loginUser };

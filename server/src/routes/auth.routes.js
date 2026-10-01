@@ -5,5 +5,6 @@ const router = express.Router();
 
 //create auth routes
 router.post("/user", authController.registerUser);
+router.post("/user/login", authController.loginUser);
 
 export default router;
