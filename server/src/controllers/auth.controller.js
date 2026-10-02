@@ -25,7 +25,7 @@ async function registerUser(req, res) {
 
     const token = jwt.sign(
       {
-        id: user._id
+        id: user._id,
       },
       process.env.JWT_SECRET,
     );
@@ -35,32 +35,35 @@ async function registerUser(req, res) {
     res.status(201).json({ msg: `Welcome, ${username}` });
   } catch (err) {
     res.status(500).json({ msg: "Sorry, something went wrong!" });
-    throw err
+    throw err;
   }
 }
 
 async function loginUser(req, res) {
-  const {username, email, password} = req.body;
+  const { username, email, password } = req.body;
 
   const user = await userModel.findOne({
-    $or: [{email}, {username}]
+    $or: [{ email }, { username }],
   });
 
-  if(!user) {
-    return res.status(404).json({msg: "user does not exist!"});
+  if (!user) {
+    return res.status(404).json({ msg: "user does not exist!" });
   }
 
-  const isPasswordValid = await bcrypt.compare(password, user.password.toString());
+  const isPasswordValid = await bcrypt.compare(
+    password,
+    user.password.toString(),
+  );
 
-  if(!isPasswordValid) {
-    return res.status(401).json({msg: "Password is wrong"});
-  } 
+  if (!isPasswordValid) {
+    return res.status(401).json({ msg: "Password is wrong" });
+  }
 
-  const token = jwt.sign({id: user._id}, process.env.JWT_SECRET);
+  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
   res.cookie("login", token);
 
-  res.status(200).json({msg: `Welcome back - ${user.username.toString()}`})
+  res.status(200).json({ msg: `Welcome back - ${user.username.toString()}` });
 }
 
 export default { registerUser, loginUser };
