@@ -1,0 +1,26 @@
+$body-background: #f5f5f5; //For body's background
+$primary-color: #ffffff; //For white colour
+$secondary-color: #000000; //For text colour
+
+$button-background: #8080801b;
+
+
+// Screen size break point for media querry
+$size-sm: 430px;
+$size-md: 1024px;
+
+// Width, height, marging, and padding
+$outer-width: 90%;
+$outer-height: 2.5rem;
+$outer-margin: 10px 0;
+$outer-padding: 2.5rem;
+
+$inner-margin: 1rem 1.5rem;
+$inner-padding: 1rem 1.5rem;
+
+//Gap of element
+$gap: 5px;
+
+//Border-value
+$border: 0.5px solid rgba(0, 0, 0, 0.216);
+$button-border: 0.25px solid rgba(177, 177, 177, 0.575);

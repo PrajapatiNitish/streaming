@@ -1,9 +1,5 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Streaming from './Stream'
+import App from './App.jsx'
+import './index.scss'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Streaming />
-  </StrictMode>,
-)
+createRoot(document.getElementById('root')).render(<App />)

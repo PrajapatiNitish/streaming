@@ -1,0 +1,20 @@
+@use "../../scss/global.scss" as *;
+
+.global_footer {
+    @include width-height($outer-width, auto);
+    @include display(flex, column);
+    @include margin-padding($outer-margin,);
+
+    align-items: center;
+    gap: $gap;
+    
+    //Developer Name
+    .developer_name {
+        @include font( $weight:bold);
+    }
+
+    .copyright{
+        @include font(10px);
+        margin-bottom: 2.5rem;
+    }
+}
