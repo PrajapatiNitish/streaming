@@ -1,19 +1,27 @@
+
 import videoModel from "../models/video.model.js"
 import uploadFile from "../services/imagekit.service.js"
 
 async function videoUpload(req, res) {
-    const {title, description} = req.body;
-    const file = req.file;
+  const { title, description } = req.body;
+  const file = req.file; // get file from user using multer
 
-    const result = await uploadFile(file.buffer.toString("base64")); //Upload video
+  //ffmpeg -> transcoding (144p, 240p, 360p, ..., 8k)
+    
 
-    const video = await videoModel.create({
-        title,
-        description,
-        video: result.url
-    })
+  //hls -> split into chunks
+  
+  
+  const result = await uploadFile(file.buffer.toString("base64")); //upload video into storage
 
-    res.status(201).json({msg: "Video uploaded"});
+  const video = await videoModel.create({
+    //upload data into db
+    title,
+    description,
+    video: result.url,
+  });
+
+  res.status(201).json({ msg: "Video uploaded" });
 }
 
 
