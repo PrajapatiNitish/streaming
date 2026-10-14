@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import footerStyle from "./Footer.module.scss";
-import AnchorTag from "../Anchors/Anchors";
+import AnchorTag from "../../Components/Anchors/Anchors.jsx";
 
 export default function Footer() {
   const links = [

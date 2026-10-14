@@ -1,5 +1,5 @@
 import headerStyle from "./Header.module.scss";
-import Button from "../Button/Button";
+import Button from "../../Components/Button/Button.jsx";
 
 export default function Header() {
   return (
