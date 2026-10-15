@@ -1,14 +1,112 @@
-@use "../abstracts/mixin" as m;
+@use "../global.scss" as g;
 
+/* Box-sizing border-box for predictable sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins and padding */
 * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
 
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-    @include m.font();
+/* 3. Root and body foundation */
+html {
+  scroll-behavior: smooth;
+  @include g.font();
+  letter-spacing: 0.25px;
+  -webkit-text-size-adjust: 100%;
+}
 
-    letter-spacing: 0.25px;
+//Put the actual width of the app in body.
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  background: g.$body-background;
+  color: g.$secondary-color;
+
+  max-width: 1280px;
+  min-height: 100dvh;
+}
+
+/* 4. Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 5. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 6. Make images and media responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Remove link underlines and color resets */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 8. Reset buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* 9. Prevent text overflow issues on headings/paragraphs */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 10. Create a root stacking context helper (optional Sass goodness). It will be take 85% width of body*/
+#root,
+#__next {
+  isolation: isolate;
+
+  @include g.width-height(100%, 100%);
+  @include g.display();
+
+  color: g.$secondary-color;
+
+  align-items: center;
 }

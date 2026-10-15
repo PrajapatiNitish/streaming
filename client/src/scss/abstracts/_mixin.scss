@@ -2,7 +2,6 @@
 @mixin font($font: 12px, $weight: 100) {
   font-size: $font;
   font-weight: $weight;
-  line-height: 1.5;
 }
   
 //Set width-height
