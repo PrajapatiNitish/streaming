@@ -1,5 +1,5 @@
 import headerStyle from "./Header.module.scss";
-import Button from "../../Components/Button/Button.jsx";
+import AnchorTag from "../../Components/Anchors/Anchors.jsx"
 
 export default function Header() {
   return (
@@ -11,8 +11,8 @@ export default function Header() {
         {/* Navbar */}
         {/* If sign in is success then Write the username */}
         <span className={headerStyle.sign_up}>
-          <Button buttonName={"Dark"} />
-          <Button buttonName={"Sign Up"}/>
+          <AnchorTag anchorName={"Dark"} anchorLink={"./dark"}/>
+          <AnchorTag anchorName={"Sign-Up"} anchorLink={"./signup"} />
         </span>
       </div>
     </>

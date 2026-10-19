@@ -11,7 +11,7 @@ export default function Footer() {
 
     {
       name: "Instagram",
-      link: "www.instagram.com",
+      link: "https://www.instagram.com/prajapati.nitish8/",
     },
 
     {
@@ -60,7 +60,7 @@ export default function Footer() {
 
         {/* copyright */}
         <div className={footerStyle.copyright}>
-          Copyright © 2026 Nitish Prajapati. All rights reserved.
+          Copyright © 2027 Nitish Prajapati. All rights reserved.
         </div>
       </div>
     </>

@@ -24,10 +24,9 @@ html {
 //Put the actual width of the app in body.
 body {
   font-family:
-    "Inter",
+    'Inter',
     system-ui,
-    -apple-system,
-    BlinkMacSystemFont;
+    -apple-system;
 
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -91,8 +90,7 @@ h6 {
 }
 
 /* 10. Create a root stacking context helper (optional Sass goodness). It will be take 85% width of body*/
-#root,
-#__next {
+#root {
   isolation: isolate;
 
   @include g.width-height(100%, 100%);

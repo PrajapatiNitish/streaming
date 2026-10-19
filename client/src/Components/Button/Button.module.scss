@@ -2,10 +2,10 @@
 
 .global_button {
   button {
-    background: $button-background;
-    color: $secondary-color;
+    background: rgb(0, 110, 255);
+    color: white;
     @include margin-padding( 0.75rem 0.5rem , 5px 12px);
-    @include border($button-border, $radius:10px);
+    @include border($radius:25px);
 
     &:hover {
         cursor: pointer;

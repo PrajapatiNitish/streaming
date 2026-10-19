@@ -1,0 +1,10 @@
+@use "../../scss/global.scss" as *;
+
+
+.upload_page {
+    @include display();
+}
+
+#upload_file {
+    @include display();
+}
