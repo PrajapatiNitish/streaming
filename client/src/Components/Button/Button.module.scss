@@ -2,14 +2,14 @@
 
 .global_button {
   button {
-    background: rgb(0, 110, 255);
+    background: rgb(0 113 227);
     color: white;
-    @include margin-padding( 0.75rem 0.5rem , 5px 12px);
-    @include border($radius:25px);
+    @include margin-padding( 0.75rem 0.5rem , 6px 12px);
+    @include border($radius:$button-font-size);
+    @include font($weight:$button-font-weight);
 
     &:hover {
         cursor: pointer;
-        @include font($weight:600);
     }   
   }
 }

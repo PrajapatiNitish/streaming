@@ -46,6 +46,7 @@ export default function Footer() {
 
           {/* Portfolio Website. */}
           <AnchorTag
+            key={"Portfolio-website"}
             anchorName={"Portfolio-Website"}
             anchorLink={"https://www.devnitish.com/"}
           />
@@ -53,6 +54,7 @@ export default function Footer() {
 
         <div className={footerStyle.feedback}>
           <AnchorTag 
+            key={"feedback"}
             anchorName={"Give me your valuable feedback. | Click Me"} 
             anchorLink={"./Feedback"} 
           />
