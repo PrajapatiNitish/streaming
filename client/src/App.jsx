@@ -1,15 +1,9 @@
-import Header from "./Layouts/Header/Header.jsx"
-import Upload from "./Pages/Upload/Upload.jsx"
-import Footer from "./Layouts/Footer/Footer.jsx"
+import Header from "./layout/header/Header.jsx"
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
-      <Upload />
-      <Footer />
     </>
   );
 }
-
-export default App;

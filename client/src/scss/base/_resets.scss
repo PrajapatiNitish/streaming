@@ -16,17 +16,20 @@
 /* 3. Root and body foundation */
 html {
   scroll-behavior: smooth;
-  @include g.font();
+  
+  font-size: 12px;
+  font-weight: normal;
+
   letter-spacing: 0.25px;
   -webkit-text-size-adjust: 100%;
 }
 
 //Put the actual width of the app in body.
 body {
-  font-family:
-    'Inter',
-    system-ui,
-    -apple-system;
+  font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -92,9 +95,5 @@ h6 {
 /* 10. Create a root stacking context helper (optional Sass goodness). It will be take 85% width of body*/
 #root {
   isolation: isolate;
-
-  @include g.width-height(100%, 100%);
-  @include g.display();
-
   align-items: center;
 }

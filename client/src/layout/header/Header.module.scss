@@ -1,0 +1,6 @@
+@use "../../scss/global.scss" as *;
+
+#globalheader {
+    height: $globalheader-height;
+    border: 0.5px solid black;
+}
