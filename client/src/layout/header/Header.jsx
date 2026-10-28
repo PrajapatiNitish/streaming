@@ -1,12 +1,17 @@
-import headerstyle from "./Header.module.scss";
+import headerstyle from "./Header.module.css";
 
 function Header() {
   return (
     <div id={headerstyle.globalheader}>
       <nav id={headerstyle.globalnav}>
         <div id={headerstyle.globalnav_content}>
-          <div id={headerstyle.globalnav_item}></div>
-          <ul id={headerstyle.globalnav_list}>hello</ul>
+          <h1 id={headerstyle.globalnav_head}>Streaming</h1>
+          <ul id={headerstyle.globalnav_list}>
+           <li>Streaming</li>
+           <li>Sign-up</li>
+           <li>hello</li>
+           <li>nope</li>
+          </ul>
         </div>
       </nav>
     </div>
