@@ -4,7 +4,10 @@ export default function Footer() {
   return (
       <footer id={footerstyle.globalfooter}>
         <div id={footerstyle.globalfooter_content}>
-          This is footer.
+          <h2 id={footerstyle.author}>Nitish Prajapati</h2>
+          <ul id={footerstyle.globalfooter_lists}>
+            Lists
+          </ul>
         </div>
       </footer>
   )

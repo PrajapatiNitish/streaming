@@ -1,3 +1,6 @@
+/* import css files */
+@import url(./variable.css);
+
 /* Resets all default css behaviour */
 
 /* Box-sizing border-box for predictable sizing */
@@ -20,7 +23,7 @@ html {
   font-size: 12px;
   font-weight: normal;
 
-  letter-spacing: 0.25px;
+  letter-spacing: 0.5px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -37,8 +40,8 @@ body {
   max-width: 1280px;
   min-height: 100dvh;
 
-  /* background: rgb(60, 60, 60);
-    color: white; */
+  background: var(--background);
+  color: var(--color);
 }
 
 /* 4. Inherit fonts for form elements */
@@ -71,6 +74,10 @@ svg {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a:hover {
+  font-weight: bold;
 }
 
 /* 8. Reset buttons */

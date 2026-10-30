@@ -1,0 +1,33 @@
+#globalheader {
+    width: 100%;
+    height: max-content;
+
+    background: rgba(0, 0, 0, 0.459);
+    backdrop-filter: blur(10px);
+
+    position:fixed;
+    z-index: 9999;
+}
+
+#globalnav {
+    width: var(--global-width);
+
+    justify-self: center;
+}
+
+#globalnav_content {
+    width: 100%;
+
+    display: var(--display-flex);
+    flex-direction:var(--direction-row);
+
+    align-items: center;
+    justify-content:space-between;
+    margin: 15px 0;
+}
+
+#globalnav_list {
+    display: var(--display-flex);
+    flex-direction: var(--direction-row);
+    gap: var(--gap);
+}

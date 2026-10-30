@@ -1,20 +1,22 @@
 /* Theme mode dark, light */
 :root {
-    --background: #ffffff;
-    --surface: #f8f9fa;
+  /* Colors */
+  --background: #121212;
+  --color: #f8f9fa;
 
-    --text-primary: #111827;
-    --text-secondary: #6b7280;
+  /* Border  */
+  --border: 1px solid rgb(94, 94, 94);
+  --border-radius: 25px;
 
-    --primary: #e50914;
-}
+  /* Display */
+  --display-flex: flex;
+  --display-grid: grid;
+  --direction-row: row;
+  --direction-col: column;
 
-[data-theme="dark"] {
-    --background: #121212;
-    --surface: #1e1e1e;
+  /* spaces */
+  --gap: 40px;
 
-    --text-primary: #f9fafb;
-    --text-secondary: #b3b3b3;
-
-    --primary: #e50914;
+  /* sizes */
+  --global-width: 75%;
 }

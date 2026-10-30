@@ -1,0 +1,22 @@
+#globalfooter {
+    width: 100%;
+
+    justify-items: center;
+}
+
+#globalfooter_content {
+    width: var(--global-width);
+
+    display: var(--display-flex);
+    flex-direction: var(--direction-col);
+
+    align-items: center;
+
+    border: var(--border);
+}
+
+
+#author {
+    font-size: 11px;
+    font-weight: 600;
+}
