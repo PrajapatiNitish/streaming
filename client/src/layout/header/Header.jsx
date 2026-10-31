@@ -35,10 +35,10 @@ function Header() {
             </svg>
           </h1>
           <ul id={headerstyle.globalnav_list}>
-            {navname.map((name) => {
+            {navname.map(({key, name, link}) => {
               return (
-                <li>
-                  <a key={name.key} href="./Upload">{name.name}</a>
+                <li key={key}>
+                  <a href={link}>{name}</a>
                 </li>
               );
             })}

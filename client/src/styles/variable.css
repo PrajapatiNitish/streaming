@@ -5,7 +5,7 @@
   --color: #f8f9fa;
 
   /* Border  */
-  --border: 1px solid rgb(94, 94, 94);
+  --border: 0.5px solid rgba(86, 86, 86, 0.572);
   --border-radius: 25px;
 
   /* Display */
@@ -16,6 +16,7 @@
 
   /* spaces */
   --gap: 40px;
+  --val: 15px 0;
 
   /* sizes */
   --global-width: 75%;

@@ -77,7 +77,7 @@ a {
 }
 
 a:hover {
-  font-weight: bold;
+  color: rgb(184, 184, 184);
 }
 
 /* 8. Reset buttons */

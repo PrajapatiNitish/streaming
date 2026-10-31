@@ -1,22 +1,30 @@
 #globalfooter {
     width: 100%;
 
+    position: relative;
+    top: 5rem;
+
     justify-items: center;
+    
+    border-top: var(--border);
 }
 
 #globalfooter_content {
     width: var(--global-width);
+    padding: var(--val);
 
     display: var(--display-flex);
     flex-direction: var(--direction-col);
 
     align-items: center;
-
-    border: var(--border);
 }
-
 
 #author {
     font-size: 11px;
     font-weight: 600;
+}
+
+#globalfooter_list {
+    display: var(--display-flex);
+    gap: 10px;
 }
