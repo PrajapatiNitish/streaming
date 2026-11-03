@@ -1,9 +1,6 @@
 #globalfooter {
     width: 100%;
 
-    position: relative;
-    top: 5rem;
-
     justify-items: center;
     
     border-top: var(--border);

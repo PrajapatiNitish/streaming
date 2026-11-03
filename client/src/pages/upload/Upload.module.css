@@ -1,0 +1,10 @@
+#global_upload {
+    width: 100%;
+
+    justify-items: center;
+}
+
+#upload {
+    width: var(--global-width);
+    margin: 5rem 0;
+}
