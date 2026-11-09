@@ -1,5 +1,5 @@
 #globalheader {
-    width: 100%;
+    width: var(--container-width);
     height: max-content;
 
     background: rgba(0, 0, 0, 0.281);
@@ -18,7 +18,7 @@
 }
 
 #globalnav_content {
-    width: 100%;
+    width: var(--container-width);
 
     display: var(--display-flex);
     flex-direction:var(--direction-row);

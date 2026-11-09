@@ -1,5 +1,5 @@
 #globalfooter {
-    width: 100%;
+    width: var(--container-width);
 
     justify-items: center;
     

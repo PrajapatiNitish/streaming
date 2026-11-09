@@ -1,0 +1,10 @@
+#banner_container {
+    width: var(--container-width);
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+    background-size:cover;
+
+    margin: 10px;
+}
+

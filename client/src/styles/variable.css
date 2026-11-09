@@ -17,7 +17,6 @@
   /* spaces */
   --gap: 40px;
   --val: 15px 0;
-
-  /* sizes */
+  --container-width:100%;
   --global-width: 80%;
 }
