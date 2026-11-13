@@ -6,11 +6,9 @@
 
 #videos_subcontainer {
   width: var(--global-width);
+  padding: var(--global-padding);
 
   justify-content: space-between;
 
-  display: var(--display-grid); 
-  grid-template-columns: 25% 25% 25%;
-  grid-template-rows: auto;
-
+  display: flex;
 }

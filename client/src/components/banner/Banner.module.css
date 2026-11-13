@@ -2,9 +2,22 @@
     width: var(--container-width);
     border-radius: var(--border-radius);
 
+    width: 320px;
+    height: 200px;
+
     overflow: hidden;
     background-size:cover;
 
-    margin: 10px;
+    background-image:url(./test-banner.jpg);
 }
 
+
+#card {
+    width: var(--container-width);
+    padding: var(--global-padding);
+    
+    position: relative;
+    top: 10rem;
+
+    backdrop-filter: blur(10px);
+}

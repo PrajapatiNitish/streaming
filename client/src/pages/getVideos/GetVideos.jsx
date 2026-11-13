@@ -10,9 +10,6 @@ export default function GetVideos() {
         <Banner />
         <Banner />
         <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
       </div>
     </div>
   );
