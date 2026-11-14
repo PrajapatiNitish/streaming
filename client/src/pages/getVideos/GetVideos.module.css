@@ -8,7 +8,8 @@
   width: var(--global-width);
   padding: var(--global-padding);
 
-  justify-content:space-around;
+  justify-content: space-around;
 
   display: flex;
+  flex-wrap: wrap;
 }

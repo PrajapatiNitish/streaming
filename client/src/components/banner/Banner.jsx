@@ -1,36 +1,15 @@
 import bannerstyle from "./Banner.module.css";
 
-export default function Banner() {
+export default function Banner({ videoname, thumbnail }) {
   return (
     <div id={bannerstyle.banner_container}>
-      <div id={bannerstyle.card}>
-        <svg
-          id={bannerstyle.play_button}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          class="size-6"
-          width="48px"
-          height="48px"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-          />
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z"
-          />
-        </svg>
-      </div>
+      <a href="" id={bannerstyle.card}>
+        <img id={bannerstyle.thumbnail} src={thumbnail} alt="" />
+      </a>
 
       <div id={bannerstyle.card_details}>
-        <h3>Movie Name</h3>
-        <p>2022 | S02</p>
+        <h2>- {videoname}</h2>
+        <p>More about videos. Like description or facts </p>
       </div>
     </div>
   );

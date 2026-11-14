@@ -1,50 +1,45 @@
 #banner_container {
-    width: var(--container-width);
-    border-radius: var(--border-radius);
-    justify-items: center;
+  width: var(--container-width);
+  border-radius: var(--border-radius);
+  justify-items: center;
 
-    width: 320px;
-    height: auto;
+  width: 320px;
+  height: auto;
+
+  margin-bottom: 20px;
 }
-
 
 #card {
-    width: var(--container-width);
-
-    background-image:url(./test-banner.jpg);
-    background-size:cover;
-    background-position: center;
-    border-radius: var(--border-radius);
-
-    width: inherit;
-    height: 200px;
+  width: var(--container-width);
+  justify-items: center;
+  align-items: center;
 }
 
-#card:hover #play_button{
-    display: flex;
-    cursor: pointer;
+#card:hover {
+  color: rgb(128, 0, 255);
 }
 
-#play_button {
-    position:relative;
 
-    top: 12rem;
-    left: 22rem;
+#thumbnail {
+  width: var(--container-width);
+  background-size: contain;
+  background-position: center;
+  border-radius: var(--border-radius);
 
-    padding: 5px;
-
-    display: none;
+  height: 200px;
 }
 
 #card_details {
-    width: var(--container-width);
-    display: var(--display-flex);
-    justify-content: space-between;
+  width: var(--container-width);
+  display: var(--display-flex);
+  flex-direction: column;
+  justify-content: space-between;
 
-    padding: 5px 10px;
+  padding: 5px 15px;
 }
 
 #card_details h3 {
-    font-weight: 400;
-    text-wrap: wrap;
+  font-weight: 500;
+  text-wrap: wrap;
+  width: var(--global-width);
 }

@@ -1,27 +1,39 @@
-import videosstyle from './GetVideos.module.css'
-import Banner from '../../components/banner/Banner.jsx'
+import videosstyle from "./GetVideos.module.css";
+import Banner from "../../components/banner/Banner.jsx";
 
 export default function GetVideos() {
   const videos = [
     {
-      video: "test-video-1",
+      key: 1,
+      video: "Panchayat",
+      thumbnail: "./test-banner.jpg",
     },
 
     {
-      video: "test-video-2",
+      key: 2,
+      video: "Gullak",
+      thumbnail: "./test-banner-2.jpg",
     },
 
     {
-      video: "test-video-2",
+      key: 3,
+      video: "Permament Romement",
+      thumbnail: "./test-banner.jpg",
     },
   ];
 
   return (
     <div id={videosstyle.videos_container}>
       <div id={videosstyle.videos_subcontainer}>
-          {videos.map(({video}) => {
-            return (<Banner key={video}/>);
-          })}
+        {videos.map(({key, video, thumbnail }) => {
+          return (
+            <Banner
+              key={key}
+              videoname={video}
+              thumbnail={thumbnail}
+            />
+          );
+        })}
       </div>
     </div>
   );
