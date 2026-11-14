@@ -5,13 +5,19 @@ function Header() {
     {
       key: 1,
       name: "Upload",
-      link: "./upload"
+      link: "./upload",
     },
 
     {
       key: 2,
       name: "Sign-up",
-      link: "./sign-in"
+      link: "./sign-in",
+    },
+
+    {
+      key: 3,
+      name: "About",
+      link: "./About",
     },
   ];
 

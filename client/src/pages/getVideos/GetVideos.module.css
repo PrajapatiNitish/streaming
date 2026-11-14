@@ -8,7 +8,7 @@
   width: var(--global-width);
   padding: var(--global-padding);
 
-  justify-content: space-between;
+  justify-content:space-around;
 
   display: flex;
 }

@@ -1,4 +1,4 @@
-import footerstyle from "./Footer.module.css";
+import footerstyle from "./About.module.css";
 import { Fragment } from "react";
 
 export default function Footer() {

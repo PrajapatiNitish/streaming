@@ -1,23 +1,50 @@
 #banner_container {
     width: var(--container-width);
     border-radius: var(--border-radius);
+    justify-items: center;
 
     width: 320px;
-    height: 200px;
-
-    overflow: hidden;
-    background-size:cover;
-
-    background-image:url(./test-banner.jpg);
+    height: auto;
 }
 
 
 #card {
     width: var(--container-width);
-    padding: var(--global-padding);
-    
-    position: relative;
-    top: 10rem;
 
-    backdrop-filter: blur(10px);
+    background-image:url(./test-banner.jpg);
+    background-size:cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+
+    width: inherit;
+    height: 200px;
+}
+
+#card:hover #play_button{
+    display: flex;
+    cursor: pointer;
+}
+
+#play_button {
+    position:relative;
+
+    top: 12rem;
+    left: 22rem;
+
+    padding: 5px;
+
+    display: none;
+}
+
+#card_details {
+    width: var(--container-width);
+    display: var(--display-flex);
+    justify-content: space-between;
+
+    padding: 5px 10px;
+}
+
+#card_details h3 {
+    font-weight: 400;
+    text-wrap: wrap;
 }
