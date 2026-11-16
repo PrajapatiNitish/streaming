@@ -1,0 +1,6 @@
+#playvideo_container {
+  width: var(--container-width);
+  justify-items: center;
+
+  border: var(--border);
+}
