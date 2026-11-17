@@ -1,6 +1,30 @@
 #playvideo_container {
   width: var(--container-width);
-  justify-items: center;
+  display: var(--display-flex);
+  gap: 10px;
+}
 
+#video_container {
+  width: 70%;
+  justify-items: center;
+  background-size: contain;
+}
+
+#video_container video{
+  min-width: 100%;
+  min-height: 405px;
+  max-height: 405px;
   border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+#video_suggestion_container {
+  width: 30%;
+  padding: var(--global-padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+#suggestion {
+  display: var(--display-flex);
 }

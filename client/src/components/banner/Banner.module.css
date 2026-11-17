@@ -9,14 +9,15 @@
   margin-bottom: 20px;
 }
 
+#banner_container:hover {
+  border-bottom: var(--border);
+  border-radius: var(--border-radius);
+}
+
 #card {
   width: var(--container-width);
   justify-items: center;
   align-items: center;
-}
-
-#card:hover {
-  color: rgb(128, 0, 255);
 }
 
 
@@ -26,7 +27,7 @@
   background-position: center;
   border-radius: var(--border-radius);
 
-  height: 200px;
+  height: 202px;
 }
 
 #card_details {
