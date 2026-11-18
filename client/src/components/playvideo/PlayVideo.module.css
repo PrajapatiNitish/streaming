@@ -10,7 +10,7 @@
   background-size: contain;
 }
 
-#video_container video{
+#video_container video {
   min-width: 100%;
   min-height: 405px;
   max-height: 405px;

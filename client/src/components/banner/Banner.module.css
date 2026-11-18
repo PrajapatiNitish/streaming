@@ -13,34 +13,3 @@
   border-bottom: var(--border);
   border-radius: var(--border-radius);
 }
-
-#card {
-  width: var(--container-width);
-  justify-items: center;
-  align-items: center;
-}
-
-
-#thumbnail {
-  width: var(--container-width);
-  background-size: contain;
-  background-position: center;
-  border-radius: var(--border-radius);
-
-  height: 202px;
-}
-
-#card_details {
-  width: var(--container-width);
-  display: var(--display-flex);
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 5px 15px;
-}
-
-#card_details h3 {
-  font-weight: 500;
-  text-wrap: wrap;
-  width: var(--global-width);
-}

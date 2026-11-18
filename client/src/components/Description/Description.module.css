@@ -1,0 +1,14 @@
+#card_details {
+  width: var(--container-width);
+  display: var(--display-flex);
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 5px 15px;
+}
+
+#card_details h3 {
+  font-weight: 400;
+  text-wrap: wrap;
+  width: var(--global-width);
+}

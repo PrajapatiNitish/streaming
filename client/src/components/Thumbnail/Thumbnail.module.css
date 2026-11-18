@@ -1,0 +1,15 @@
+#card {
+  width: var(--container-width);
+  justify-items: center;
+  align-items: center;
+}
+
+
+#thumbnail {
+  width: var(--container-width);
+  background-size: contain;
+  background-position: center;
+  border-radius: var(--border-radius);
+
+  height: 202px;
+}

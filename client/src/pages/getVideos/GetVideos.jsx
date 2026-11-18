@@ -1,6 +1,6 @@
 import videosstyle from "./GetVideos.module.css";
-import Banner from "../../components/banner/Banner.jsx";
-import PlayVideo from "../../components/playvideo/PlayVideo.jsx"
+import Banner from "../../components/Banner/Banner.jsx";
+import PlayVideo from "../../components/PlayVideo/PlayVideo.jsx"
 
 export default function GetVideos() {
   const videos = [
@@ -36,7 +36,7 @@ export default function GetVideos() {
           );
         })} */}
 
-          <PlayVideo />
+        <PlayVideo />
       </div>
     </div>
   );

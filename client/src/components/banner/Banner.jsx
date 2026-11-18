@@ -1,16 +1,13 @@
 import bannerstyle from "./Banner.module.css";
+import Description from "../Description/Description.jsx";
+import Thumbnail from "../Thumbnail/Thumbnail.jsx";
 
 export default function Banner({ videoname, thumbnail }) {
   return (
     <div id={bannerstyle.banner_container}>
-      <a href="" id={bannerstyle.card}>
-        <img id={bannerstyle.thumbnail} src={thumbnail} alt="" />
-      </a>
+      <Thumbnail thumbnail={thumbnail} />
 
-      <div id={bannerstyle.card_details}>
-        <h2>- {videoname}</h2>
-        <p>More about videos. Like description or facts </p>
-      </div>
+      <Description videoname={videoname} />
     </div>
   );
 }
