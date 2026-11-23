@@ -1,6 +1,6 @@
 import videosstyle from "./GetVideos.module.css";
 import Banner from "../../components/Banner/Banner.jsx";
-import PlayVideo from "../../components/PlayVideo/PlayVideo.jsx";
+import Error from "../../components/Error/Error.jsx"
 
 export default function GetVideos() {
   const videos = [
@@ -26,11 +26,11 @@ export default function GetVideos() {
   return (
     <div id={videosstyle.videos_container}>
       <div id={videosstyle.videos_subcontainer}>
-        {videos.map(({ key, video, thumbnail }) => {
+        {/* {videos.map(({ key, video, thumbnail }) => {
           return <Banner key={key} videoname={video} thumbnail={thumbnail} />;
-        })}
+        })} */}
 
-        <PlayVideo />
+        <Error />
       </div>
     </div>
   );
