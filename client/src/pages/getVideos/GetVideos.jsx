@@ -1,36 +1,24 @@
+import api from "../../api/axios.js";
 import videosstyle from "./GetVideos.module.css";
 import Banner from "../../components/Banner/Banner.jsx";
-import Error from "../../components/Error/Error.jsx"
+import PlayVideo from "../../components/PlayVideo/PlayVideo.jsx";
+import Error from "../../components/Error/Error.jsx";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function GetVideos() {
-  const videos = [
-    {
-      key: 1,
-      video: "Panchayat",
-      thumbnail: "./test-banner.jpg",
-    },
+  const [thumbnails, setThumbnail] = useState([]);
 
-    {
-      key: 2,
-      video: "Gullak",
-      thumbnail: "./test-banner-2.jpg",
-    },
-
-    {
-      key: 3,
-      video: "Permament Romement",
-      thumbnail: "./test-banner.jpg",
-    },
-  ];
+  useEffect(() => {
+    
+  });
 
   return (
     <div id={videosstyle.videos_container}>
       <div id={videosstyle.videos_subcontainer}>
-        {/* {videos.map(({ key, video, thumbnail }) => {
+        {thumbnails.map(({ key, video, thumbnail }) => {
           return <Banner key={key} videoname={video} thumbnail={thumbnail} />;
-        })} */}
-
-        <Error />
+        })}
       </div>
     </div>
   );

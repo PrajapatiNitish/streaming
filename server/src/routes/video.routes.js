@@ -1,5 +1,5 @@
 import express from "express";
-import videoController from "../controllers/video.controller.js";
+import {videoUpload, thumbnail} from "../controllers/video.controller.js";
 import multer from "multer";
 
 const upload = multer({
@@ -12,7 +12,9 @@ const router = express.Router();
 router.post(
     "/upload", 
     upload.single("video"), //req.file
-    videoController.videoUpload
+    videoUpload
 );
+
+router.get("/thumbnail", thumbnail);
 
 export default router;

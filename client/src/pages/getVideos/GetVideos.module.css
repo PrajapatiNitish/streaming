@@ -1,7 +1,9 @@
 #videos_container {
   width: var(--container-width);
   justify-items: center;
-  margin: 5rem 0;
+
+  position: relative;
+  top: 5rem;
 }
 
 #videos_subcontainer {

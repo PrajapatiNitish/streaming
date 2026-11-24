@@ -1,4 +1,3 @@
-
 import videoModel from "../models/video.model.js"
 import uploadFile from "../services/imagekit.service.js"
 
@@ -24,5 +23,26 @@ async function videoUpload(req, res) {
   res.status(201).json({ msg: "Video uploaded" });
 }
 
+async function thumbnail(req, res) {
+  res.status(200).json([
+    {
+      key: 1,
+      link: "https://google.com",
+      videnname: "Panchayat",
+    },
 
-export default { videoUpload };
+    {
+      key: 2,
+      link: "https://microsoft.com",
+      videnname: "Panchayat",
+    },
+    {
+      key: 3,
+      link: "https://apple.com",
+      videnname: "Panchayat",
+    },
+  ]);
+}
+
+
+export { videoUpload, thumbnail };
