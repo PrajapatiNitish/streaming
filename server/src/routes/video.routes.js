@@ -1,5 +1,5 @@
 import express from "express";
-import {videoUpload, thumbnail} from "../controllers/video.controller.js";
+import {videoUpload, thumbnail, watch} from "../controllers/video.controller.js";
 import multer from "multer";
 
 const upload = multer({
@@ -16,5 +16,7 @@ router.post(
 );
 
 router.get("/thumbnail", thumbnail);
+
+router.get("/watch", watch);
 
 export default router;

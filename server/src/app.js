@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 //All APIs gate
 app.use("/auth", authRoute);
-app.use("/video", videoRoute);
+app.use("/videos", videoRoute);
 
 app.get("/", (req, res) => {
     res.status(200).json({

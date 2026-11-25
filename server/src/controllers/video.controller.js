@@ -44,5 +44,13 @@ async function thumbnail(req, res) {
   ]);
 }
 
+async function watch(req, res) {
+  res.status(200).json({
+    link: "https://youtube.com",
+    name: "panchayat S01 E01",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur facere enim voluptas nesciunt unde quos ut blanditiis ipsum temporibus impedit quisquam eveniet in minima, nam nulla? Quam eum voluptas ipsa."
+  })
+}
 
-export { videoUpload, thumbnail };
+
+export { videoUpload, thumbnail, watch };
