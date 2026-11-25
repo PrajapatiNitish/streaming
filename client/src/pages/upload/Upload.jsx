@@ -4,7 +4,7 @@ export default function Upload() {
   return (
     <div id={uploadstyles.global_upload}>
       <div id={uploadstyles.upload}>
-        
+        This is upload routes
       </div>
     </div>
   )

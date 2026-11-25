@@ -24,20 +24,21 @@ async function videoUpload(req, res) {
 }
 
 async function thumbnail(req, res) {
+
   res.status(200).json([
     {
-      key: 1,
+      id: "1124342h3e33iki3o",
       link: "https://google.com",
       videnname: "Panchayat",
     },
 
     {
-      key: 2,
+      id: "1124342h3e33ikio6",
       link: "https://microsoft.com",
       videnname: "Panchayat",
     },
     {
-      key: 3,
+      id: "1124342h3e33iki5o",
       link: "https://apple.com",
       videnname: "Panchayat",
     },

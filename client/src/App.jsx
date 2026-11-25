@@ -1,11 +1,11 @@
-import Header from "./layout/header/Header.jsx"
-import Main from "./pages/GetVideos/GetVideos.jsx"
+import Header from "./layout/header/Header.jsx";
+import AppRouter from "./AppRoutes.jsx";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Main />
+      <AppRouter />
     </>
   );
 }

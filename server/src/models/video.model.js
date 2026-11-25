@@ -9,6 +9,11 @@ const videoSchema = new mongoose.Schema({
     description: {
         type: String
     },
+
+    thumbnail: {
+        type: String,
+        ref: "thumbnails"
+    },
     
     video: {
         type: String,

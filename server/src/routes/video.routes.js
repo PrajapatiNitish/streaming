@@ -17,6 +17,6 @@ router.post(
 
 router.get("/thumbnail", thumbnail);
 
-router.get("/watch", watch);
+router.get("/watch/:id", watch);
 
 export default router;
