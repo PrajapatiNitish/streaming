@@ -15,7 +15,7 @@ router.post(
     videoUpload
 );
 
-router.get("/thumbnail", thumbnail);
+router.get("/", thumbnail);
 
 router.get("/watch/:id", watch);
 

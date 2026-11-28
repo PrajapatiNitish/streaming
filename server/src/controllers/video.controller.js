@@ -1,25 +1,30 @@
 import jwt from "jsonwebtoken";
-import crypto from "node:crypto";
 import videoModel from "../models/video.model.js";
+import userModel from "../models/user.model.js";
+import { randomUUID } from "node:crypto";
 import uploadFile from "../services/imagekit.service.js";
 
 const secretKey = process.env.JWT_SECRET;
 
 async function videoUpload(req, res) {
-  const token = req.cookies.user;
+  const token = req.cookies.ROLLOUT_TOKEN;
+  const decode = {};
+
   if (!token) {
     return res.status(401).json({ msg: "Unauthorized" });
   }
 
   try {
-    const decode = jwt.verify(token, secretKey);
-    console.log(decode);
+    decode = jwt.verify(token, secretKey);
     res.status(202);
   } catch (err) {
     return res.status(401).json({ msg: "Unauthorized" });
   }
 
   const { title, description, thumbnail } = req.body;
+  const userId = () => {
+    console.log(decode);
+  }
   const file = req.file; // get file from user using multer
 
   //ffmpeg -> transcoding (144p, 240p, 360p, ..., 8k)
@@ -30,8 +35,10 @@ async function videoUpload(req, res) {
 
   const video = await videoModel.create({
     //upload data into db
+    userId,
     title,
     description,
+    thumbnail,
     video: result.url,
   });
 
@@ -39,10 +46,8 @@ async function videoUpload(req, res) {
 }
 
 async function thumbnail(req, res) {
-  let token = req.cookies.user;
-  const randomId = crypto.randomUUID();
-
-  console.log(randomId);
+  let token = req.cookies.token;
+  const randomId = randomUUID();
 
   if (!token) {
     token = jwt.sign(
@@ -54,29 +59,15 @@ async function thumbnail(req, res) {
     );
   }
 
-  res.cookie("user", token);
+  res.cookie("ROLLOUT_TOKEN", token);
 
-  res.status(200).json([
-    {
-      id: "1124342h3e33iki3o",
-      link: "https://google.com",
-      videnname: "Panchayat",
-    },
+  const randomVideos = await videoModel.aggregate([{$sample: {size: 9}}]);
 
-    {
-      id: "1124342h3e33ikio6",
-      link: "https://microsoft.com",
-      videnname: "Panchayat",
-    },
-    {
-      id: "1124342h3e33iki5o",
-      link: "https://apple.com",
-      videnname: "Panchayat",
-    },
-  ]);
+  res.status(200).json(randomVideos);
 }
 
 async function watch(req, res) {
+  
   res.status(200).json({
     link: "https://youtube.com",
     name: "panchayat S01 E01",

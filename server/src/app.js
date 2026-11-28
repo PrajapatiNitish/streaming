@@ -26,8 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 //All APIs gate
-app.use("/auth", authRoute);
-app.use("/videos", videoRoute);
+app.use("/", videoRoute);
 
 app.get("/", (req, res) => {
     res.status(200).json({
